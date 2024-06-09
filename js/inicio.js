@@ -126,7 +126,6 @@ function setListeners() {
     for (let item = 0; item < botonFavorito.length; item++) {
         botonFavorito[item].addEventListener('click', () => {
             let id = 'img-' + botonFavorito[item].value
-            console.log(document.getElementById(id).src.split('/')[4])
             if (document.getElementById(id).src.split('/')[4] != "favorite-checked.svg") {
                 favoritos.agregarFav(botonFavorito[item].value)
 

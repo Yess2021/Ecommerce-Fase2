@@ -37,7 +37,6 @@ function cargarPlantilla(id) {
         nosotros: nosotros.start,
         registro: registro.start,
     }
-    console.log("start",start)
 
     const xhr = new XMLHttpRequest()
     xhr.open('get',url)
@@ -67,7 +66,6 @@ function cargarPlantillas(){
         link.addEventListener('click', e => {
             e.preventDefault()
             const id = link.id
-            console.log("clicked", id)
             location.hash = id
         })
     })
@@ -80,7 +78,6 @@ function cargarPlantillas(){
     botonBusqueda.addEventListener('click', botonSearch)
 
     window.addEventListener('hashchange', () => {
-        console.log('cambio el hash (#) en la URL')
         const id = location.hash.slice(1)
         cargarPlantilla(id)
     })
@@ -88,7 +85,6 @@ function cargarPlantillas(){
 
 function botonSearch() {
     const display = window.getComputedStyle(barraBuscar).getPropertyValue("display");
-    console.log(display)
     if (display === 'none') {
         barraBuscar.style.display = 'flex';
         inputBuscar.focus()

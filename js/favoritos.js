@@ -22,16 +22,13 @@ function representarCardsFavoritos() {
 const productos = productosMem.getAll()
 
     let cards = ''
-    console.log(listaFavoritos)
     if(listaFavoritos.length) {
-        console.log(listaFavoritos.length)
         for(let i=0; i<listaFavoritos.length; i++) {
 
             const producto = productos.find(producto => producto.nombre === listaFavoritos[i])
-            console.log(producto)
             let arrayColores = producto.colores
-            let existencia = inicio.stockExistencia(producto.stock, "stock") // agregado 06/06
-            let colores = inicio.stockExistencia(producto.stock, arrayColores)// agregado 06/06
+            let existencia = inicio.stockExistencia(producto.stock, "stock")
+            let colores = inicio.stockExistencia(producto.stock, arrayColores)
             cards += '<section class="card-container">'+
                         '<img  class="foto" src="' + producto.foto + '">' +
                         '<button class="favoritosIcon">' + 
@@ -39,8 +36,7 @@ const productos = productosMem.getAll()
                         '</button>' +
                         '<h4>' + producto.nombre + '</h4>' +
                         '<p>' + producto.detalles + '</p>' +
-                        '<p> $' + producto.precio + '</p>'// +   se modifica 06/06
-                       // '<p> Talles ' + producto.stock + '</p>' +  se modifica 06/06
+                        '<p> $' + producto.precio + '</p>'
             tallas.forEach((valor) => { 
                         cards += (existencia.includes(valor)) ?
                             `<label id="${producto.id + "," + valor}" class="tallaSeleccionar">  ${valor}</label>`
@@ -67,16 +63,13 @@ function agregarFav(nombre) {  // Para guardar favoritos en local storage
         return favorito !== nombre
     }
 
-    console.log(nombre)
     if(!listaFavoritos.includes(nombre)){
         favoritoMem.guardar(nombre)
 
     } else {
         listaFavoritos = listaFavoritos.filter(filtrar)
     }
-    listaFavoritos = favoritoMem.getAll() 
-    console.log("lista actualizada", listaFavoritos)
-    
+    listaFavoritos = favoritoMem.getAll()
 
 }
 

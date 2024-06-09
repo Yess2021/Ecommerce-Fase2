@@ -229,7 +229,6 @@ function borrarCarrito() {
 
 async function enviarPedido(pedido) {
     await servicioCarrito.enviar(pedido)
-    console.log('pedido recibido!')
 
     carritoMem.clear()
     render()
@@ -320,7 +319,6 @@ function calculo(array,precio,inicial="no"){
         inicial=(!inicial)?0:inicial
     })
     string +=`</td>`
-    console.log(inicial)
     return (inicial=="no")?string:inicial
 }
 
@@ -335,9 +333,6 @@ function setListeners() {
             if (confirm(`Esta seguro de borrar el producto del carrito id ${ id }?`)) {
                 // Borramos el producto en el recurso local
                 carritoMem.eliminar(id)
-                console.log("Id del producto a eliminar: "+id)
-                //total=0
-                // debo gregar una id al aComprar////////////////////////////////////////////pendiente PENDIENTE
                 // Recargamos la vista y sus listener con los datos nuevos
                 render()
             }

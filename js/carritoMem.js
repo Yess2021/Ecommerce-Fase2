@@ -44,7 +44,6 @@ const updateCounter = () => {
 const guardar = prod => {
     carrito.push(prod)
     carritoLocalStorage.guardar(carrito)
-    console.log(carrito)
     updateCounter()
 }
 

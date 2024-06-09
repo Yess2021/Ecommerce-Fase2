@@ -42,10 +42,8 @@ function currency(total){ //agregado para dar formato de moneda
 function copiarProductoEnFormulario(producto) {
 
     for (let campo in producto) {
-        console.log("Producto tiene: " + campo)
         if (campo === "colores") {
             for (let talles = 0; talles < tallas.length; talles++) {
-                console.log(`color1${tallas[talles]}`)
                 refColor1[talles] = document.getElementById(`color1${tallas[talles]}`)
                 refColor2[talles] = document.getElementById(`color2${tallas[talles]}`)
                 refColor3[talles] = document.getElementById(`color3${tallas[talles]}`)
@@ -60,7 +58,6 @@ function copiarProductoEnFormulario(producto) {
                 refStock2[talles] = document.getElementById(`color2C${tallas[talles]}`)
                 refStock3[talles] = document.getElementById(`color3C${tallas[talles]}`)
 
-                console.log("Producto campo:" + producto[campo])
                 refStock1[talles].value = producto[campo][talles][0]
                 refStock2[talles].value = producto[campo][talles][1]
                 refStock3[talles].value = producto[campo][talles][2]
@@ -107,11 +104,8 @@ function borrarFormulario() {
 }
 
 function formularioValido(producto) {
-    console.log("aca", producto)
     for (let campo in producto) {
-        // Esto es para seccion de Envio que yo no uso ///////////////////////////////////
         if (!producto[campo]) {
-            console.log(producto, campo)
             return false
         }
     }
@@ -120,8 +114,6 @@ function formularioValido(producto) {
 
 async function agregarActualizar(e) {
     e.preventDefault()
-
-    console.log('agregar()')
     let nombre = refNombre.value
     let detalles = refDetalles.value
     let precio = +refPrecio.value  
@@ -134,7 +126,6 @@ async function agregarActualizar(e) {
 
     for (let talles = 0; talles < tallas.length; talles++) {
         colores[talles].push(refColor1[talles].value, refColor2[talles].value, refColor3[talles].value)
-        console.log(colores)
     }
 
     let foto = refFoto.value
@@ -151,14 +142,11 @@ async function agregarActualizar(e) {
     }
 
     if (formularioValido(producto)) {
-        console.log(producto)
-
         if (editarID) {
             producto.id = editarID
 
             // Actualizamos el producto en el recurso remoto
             const productoActualizado = await servicioProductos.actualizar(editarID, producto)
-            console.log(productoActualizado)
             // Actualizamos el producto en el recurso local
             productosMem.actualizar(productoActualizado.id, productoActualizado)
 
@@ -249,7 +237,6 @@ function setListeners() {
     botonesBorrar.forEach(boton => {
         boton.addEventListener('click', async () => {
             const id = boton.id.split('-')[1]
-            console.log('btnBorrar id', id)
 
             if (confirm(`Esta seguro de borrar el producto de id ${id}?`)) {
                 // Borramos el producto en el recurso remoto
@@ -267,7 +254,6 @@ function setListeners() {
     botonesEditar.forEach(boton => {
         boton.addEventListener('click', async () => {
             const id = boton.id.split('-')[1]
-            console.log('btnEditar id', id)
 
             editarID = id
 
@@ -286,7 +272,6 @@ function setListeners() {
     botonesCancelar.forEach(boton => {
         boton.addEventListener('click', async () => {
             const id = boton.id.split('-')[1]
-            console.log('btnCancelar id', id)
 
             editarID = null
 
@@ -406,7 +391,6 @@ async function start() {
     refNombre = document.getElementById('nombre')
     refDetalles = document.getElementById('detalles')
     refPrecio = document.getElementById('precio')
-    //refStock = document.getElementById('stock')
 
     for (let j = 0; j < tallas.length; j++) {
         refStock1[j] = document.getElementById(`color1C${tallas[j]}`)
@@ -426,7 +410,6 @@ async function start() {
     refFormAlta.onsubmit = agregarActualizar
 
     const productos = await servicioProductos.getAll()
-    //console.log(productos)
     productosMem.set(productos)
 
     render()
