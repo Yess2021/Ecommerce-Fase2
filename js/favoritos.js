@@ -12,7 +12,7 @@ import inicio from "./inicio.js";
 //           Variables Globales
 // -------------------------------------------
 
-let listaFavoritos = favoritoMem.getAll() 
+let listaFavoritos = favoritoMem.getAll()
 let tallas = alta.funTallas()  
 
 // -------------------------------------------
@@ -29,7 +29,7 @@ const productos = productosMem.getAll()
 
             const producto = productos.find(producto => producto.nombre === listaFavoritos[i])
             console.log(producto)
-            let arrayColores = producto.colores// agregado 06/06
+            let arrayColores = producto.colores
             let existencia = inicio.stockExistencia(producto.stock, "stock") // agregado 06/06
             let colores = inicio.stockExistencia(producto.stock, arrayColores)// agregado 06/06
             cards += '<section class="card-container">'+

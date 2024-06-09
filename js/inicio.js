@@ -29,7 +29,7 @@ let cantidad = []
 
 function render() {
 
-    //localStorage.clear();
+    //localStorage.clear()
 
     const listaFavoritos = favoritos.lista()
 
