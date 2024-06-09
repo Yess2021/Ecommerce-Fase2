@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECommerce</title>
+
+    <!-- css genérico -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- css de las plantillas individuales -->
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/alta.css">
+    <link rel="stylesheet" href="css/carrito.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/nosotros.css">
+    <link rel="stylesheet" href="css/favoritos.css">
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container-mariposa">
+            <h2 id="nombre-empresa">Mariposa 88</h2>
+            <div class="logo-mariposa"></div>
+        </div>
+
+        <nav>
+            <ul>
+                <li> <a href="" id="inicio">Inicio</a> </li>
+                <li> <a href="" id="alta">Alta</a> </li>
+                <li> <a href="" id="contacto">Contacto</a> </li>
+                <li> <a href="" id="nosotros">Nosotros</a> </li>
+            </ul>
+        </nav>
+
+        <div class="iconos-header">
+            <a class="logoFav" href="" id="favoritos"></a>
+            <a class="logoRegistro" href="" id="registro"></a>
+
+            <div class="search-container">
+                <div id="logoBuscar"></div> 
+                <div id="barra-busqueda">
+                    <input type="text" id="input-busqueda" />
+                    <input type="button" value="Buscar" id="buscar" />
+                </div>
+            </div>
+
+            <a class="logoCarrito" href="" id="carrito">
+                <div id="contadorCarrito"></div>
+            </a>
+        </div>
+
+        <button class="menu-hamburger" id="hamburger"></button>
+
+    </header>
+
+    <!-- ---------------------------------------------------------------- -->
+
+    <div id="overlay">
+        <div class="mobile-menu">
+            <div class="mobile-icons">
+                <div class="grupo-iconos">
+                    <a class="logoFav" href="index.html#favoritos"></a>
+                    <a class="logoRegistro" href="index.html#registro"></a>
+                    <a class="logoCarrito" href="index.html#carrito"></a>
+                </div>
+                <button class="cerrar" id="closeMenu"></button> 
+            </div>
+            <hr class="hr-mobile">
+            <ul class="links-menu">
+                <li> <a href="index.html">Inicio</a> </li>
+                <li> <a href="index.html#alta">Alta</a> </li>
+                <li> <a href="index.html#contacto">Contacto</a> </li>
+                <li> <a href="index.html#nosotros">Nosotros</a> </li>
+            </ul>
+            <div class="social-icons">
+                <div class="face"></div>
+                <div class="insta"></div>
+                <div class="tictoc"></div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- ------------------------------------------------------------------------------- -->
+    <main>
+
+    </main>
+    <div id="alert">
+        Alert!
+    </div>
+    <div class="icons-footer">
+        <div class="container-mariposa">
+            <h2 id="nombre-empresa">Mariposa 88</h2>
+            <div class="logo-mariposa"></div>
+        </div>
+        <div id="social-footer">
+            <div class="face"></div>
+            <div class="insta"></div>
+            <div class="tictoc"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="extra-footer">
+        <ul>
+            <li>Cambios y devoluciones</li>
+            <li>Envios</li>
+            <li>Formas de Pago</li>
+            <li>Terminos y Condiciones</li>
+        </ul>
+    </div>
+
+
+    <footer>
+        <h3 class="titulo-footer">&copy; Copyright 2024 Bikinis Mariposa 88</h3>
+    </footer>
+
+
+    <!-- código de las plantillas individuales -->
+    <script type="module" src="js/inicio.js"></script>
+    <script type="module" src="js/alta.js"></script> 
+    <script type="module" src="js/carrito.js"></script>
+    <script type="module" src="js/contacto.js"></script>
+    <script type="module" src="js/favoritos.js"></script>
+    <script type="module" src="js/nosotros.js"></script>
+    <script type="module" src="js/registro.js"></script>
+
+    <!-- script de datos -->
+    <script type="module" src="js/productosMem.js"></script>
+    <script type="module" src="js/servicioProductos.js"></script>
+
+    <!-- código general -->
+    <script type="module" src="js/main.js"></script>
+
+</body>
+
+</html>

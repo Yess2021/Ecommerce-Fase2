@@ -1,0 +1,3 @@
+En carrito.js se agrega función calculo para sacar las operaciones de la función Render, se modifica filasTabla para incluir el llamado a calculo e incluir los subtotales. se agrega la linea para hacer el calculo del total.
+Tanto en inicio.js y carrito.js se comentó donde sale cantidadTC y arrayCntidadTC pues ya no se utilizan
+se agrega favoritoMem.js y favoritoLocalStorage,js para almacenar los favoritos y se modifica favoritos

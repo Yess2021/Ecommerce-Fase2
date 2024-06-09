@@ -1,0 +1,262 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.alta { 
+    margin: 0 auto 20px;
+    width: 90%;
+    padding: 20px;
+    height: auto;
+}
+
+.alta .parrafo{
+    text-align: center;
+}
+
+.alta h1.titulo-alta {
+    text-align: center;
+    margin-top: 100px;
+    font-weight: 400;
+    font-size: 35px;
+}
+
+/* ----- Maquetado del formulario de alta ------- */
+
+.alta .alta-form {
+    background-image: linear-gradient(to right, #ffd580 5%, #ffb580 80%, #ff9580 100%);
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 30px;
+    color: white;
+    border-radius: 20px;
+}
+
+.alta .alta-form:hover {
+    box-shadow: 5px 5px 7px rgb(136, 77, 50);
+   
+}    
+.alta .input-group {
+    text-align: center;
+    padding: 3px;
+}
+
+.alta label {
+    color: rgb(27, 27, 27);
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.alta input {
+    width: 70%;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 7px #c86653;
+    outline: none;
+    border-style: none;  
+}
+
+.alta input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+/* ----- Maquetado de la tabla de productos ------- */
+
+.alta th, td {
+    border: 1px solid rgb(94, 51, 32);
+    width: 80px;
+    height: 30px;
+    padding: 10px;  
+}
+
+.alta table {  
+    border-collapse: collapse;
+    margin: 5px auto 5px;
+}
+
+.alta th {
+    text-transform: uppercase;
+    font-weight: 400;
+    background: #f26a4e;
+    color: white;
+    font-family: "Roboto", sans-serif; 
+}
+
+.alta h2 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+/* ---------------------------------------- */
+
+.alta table button[id*="btnBorrar-"] {
+    margin: 15px auto;
+    display: block;
+    width: 70%;
+    height: 30px; 
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+
+    background-color: #f26a4e;
+    color: white;
+}
+
+.alta table button[id*="btnBorrar-"]:disabled {
+    opacity: 0.7;
+}
+
+.alta table button[id*="btnEditar-"] {
+    margin: 15px auto;
+    display: block;
+    width: 70%;
+    height: 30px;   
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+
+    background-color: goldenrod;
+    color: #222;
+}
+
+.alta table button[id*="btnCancelar-"] {
+    margin: 15px auto;
+    display: block;
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 13px;
+    border: none;
+
+    background-color: #222;
+    color: white;
+}
+
+.alta .btnAgregar {
+    margin: 15px auto;
+    display: block;
+    width: 90px;
+    height: 35px;
+  
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+
+    background-color: #f26a4e;
+    box-shadow: 5px 5px 7px rgb(136, 77, 50);
+    color: white;
+}
+
+.alta .btnActualizar {
+    margin: 15px auto;
+    display: block;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+
+    background-color: #f26a4e;
+    box-shadow: 5px 5px 7px rgb(136, 77, 50);
+    color: white;
+}
+
+.alta .talles-container { 
+    height: 35px; 
+    text-align: center;
+    margin: 0px auto;
+}
+
+.alta .centrar {
+    text-align: center;
+}
+
+.error-details {
+    color: red;
+    padding-top: 8px;
+}
+
+.alta .colores-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 120px;
+    margin: 5px auto 5px;
+    font-size: 14px;
+}
+
+.alta .colores {
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 20px;
+    height: 10px;
+    flex-direction: row;
+    margin: 5px auto 5px;
+    justify-content: space-between;
+}
+
+/* ------------------------------------------------------------------------------------- */
+
+@media(max-width:768px) {
+    .alta h1.titulo-alta {
+    margin-top: 80px;
+    font-size: 27px;
+    }
+    .alta form button {
+    font-size: 17px;
+    width: 80px;
+    height: 30px;
+    }
+}
+
+@media(max-width:576px) {
+    .alta h1.titulo-alta {
+    margin-top: 60px;
+    font-size: 23px;
+    }
+
+    .alta form button {
+    font-size: 15px;  
+    width: 70px;
+    height: 30px;
+    }
+
+    .alta h2#titulo-table {
+    font-size: 20px;
+    }
+
+    .alta td, th {
+    padding: 2px;  
+    font-size: 13px;
+    } 
+
+    .alta label {
+    font-size: 14px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.nosotros {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.nosotros-titulo {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100px;  
+    height: 100px;   
+    background-image: linear-gradient(to right,#ffd580 5%, #ffb580 80%, #ff9580 100%);
+    background-size: cover;
+    width: 100%;
+    margin: 120px auto 40px;
+}
+
+.nosotros section #nosotros-intro :nth-child(2) {
+    width: 60%;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.nosotros section#intro {
+    margin: 50px auto 10px;
+}
+
+.nosotros section#intro p {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.nosotros .sections-nosotros {  
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    align-self: center; 
+    text-align: center;  
+}
+
+.nosotros #sustent {
+    text-align: left;
+    padding: 0 100px;
+    margin-bottom: 20px;
+    margin: 25px 20px;
+}  
+
+.nosotros .img1-sustent {
+    background-image: url('https://www.clarin.com/2023/10/11/4CWipIQD2_1200x0__1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nosotros input#saberMas {
+    appearance: none; 
+}
+
+.nosotros label#contenido {
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 6px; 
+    user-select: none;
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 15px;  
+}
+
+.nosotros .contenido {
+    display: none;
+}
+
+.nosotros input#saberMas:checked + .contenido {
+    display: block;
+    margin-left: 30px;
+}
+
+.nosotros button#volver {
+    border: 1px solid grey;
+    border-radius: 4px;
+    margin-top: 20px;
+    width: 80px;
+    height: 30px;
+}
+
+.nosotros button#volver a {
+    text-decoration: none;
+    color: black;
+}
+
+@media(max-width:576px){
+    .nosotros .nosotros-titulo {
+    font-size: 30px;
+    }
+}
+

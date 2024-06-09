@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto", sans-serif;    
+}
+
+ul, h1, h3, p {
+    margin: 0;
+}
+
+header {    
+    background-color: rgba(250, 247, 247, 0.2);
+    backdrop-filter: blur(11px);
+    font-weight: 400;
+    font-size: 17px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 5; 
+    padding: 0 20px;  
+    align-items: center;
+}
+
+header nav {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container-mariposa {
+    display: flex;
+    width: 200px;  
+}
+
+.logo-mariposa {
+    background-image: url('../Img/mariposa.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    animation: rotateX 1s infinite;
+}
+@keyframes rotateX {
+    20% { transform: rotateX(20deg); }
+    50% { transform: rotateX(50deg); }
+}
+
+#nombre-empresa {
+    font-size: 19px;
+}
+
+header nav {
+    display: flex;
+}
+
+header .iconos-header {
+    display: flex;
+}
+
+header .iconos-header {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* ----------------------------------------------------------------- */
+
+.menu-hamburger {
+    display: none;
+    background-image: url("../Icons/hamburger.svg");
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    box-shadow: none;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.mobile-menu {
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: absolute;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.mobile-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grupo-iconos {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+}
+
+.cerrar {
+    background-image: url('../Icons/x_icon.png');
+    background-size: contain;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    width: 25px; 
+    height: 30px;
+}
+
+.links-menu {
+    padding-left: 0;
+}
+
+.links-menu li {
+    list-style: none;
+    margin: 10px 0;
+    font-size: 18px;   
+}
+
+.links-menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+hr.hr-mobile {
+    width: 100%;
+    margin-top: 15px;
+    height: 1px;
+    border: none;
+    background-color: grey;
+}
+
+.social-icons {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+/* ----------------------------------------------------------------- */
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    display: block;
+    height: 54px;
+    color: black;
+    text-align: center;
+    line-height: 54px;
+}
+
+.logoFav {
+    background-image: url('../Icons/9025703_heart_icon.png');    
+    line-height: 54px;
+    width: 25px; 
+    height: 30px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.logoRegistro {
+    background-image: url('../Icons/8666609_user_icon.png');
+    width: 25px; 
+    height: 30px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#logoBuscar {
+    background-image: url('../Icons/9035096_search_icon.png');
+    line-height: 20px;
+    width: 25px; 
+    height: 30px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+} 
+
+.search-container {
+    display: inline;
+    position: relative;
+}
+
+#barra-busqueda {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    gap: 5px;
+    top: 60px;
+    right: -10px;
+    padding: 5px;  
+}
+
+#input-busqueda {
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 270px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 25px;
+    outline: none;
+}
+
+input#buscar {
+    background-color: rgb(255, 255, 255, 0.8);
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    height: 25px;
+    cursor: pointer;
+}
+
+.logoCarrito {
+    position: relative;
+    background-image: url('../Icons/4781813_bag_buy_cart_market_shop_icon.png');
+    width: 25px; 
+    height: 30px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#contadorCarrito {
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    width: 14px;
+    height:  14px;
+    font-size: 10px;
+    color: white;
+    background-color: red;
+    border-radius: 10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons-footer {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 50px auto 20px;
+}
+
+.face {
+    background-image: url('../Icons/fb.svg');
+}
+
+.insta {
+    background-image: url('../Icons/insta.svg');    
+}
+
+.tictoc {
+    background-image: url('../Icons/tictoc.svg');
+}
+
+.face, .insta, .tictoc {
+    width: 35px;
+    height: 35px;
+    background-size: contain; 
+    background-repeat: no-repeat;
+}
+
+#social-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 150px;
+}
+
+.extra-footer ul {
+    margin-bottom: 10px;
+    color: rgb(150, 57, 13);
+    font-size: 15px;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 0;
+}
+
+.extra-footer ul li {
+    padding: 5px;    
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: #773517;
+}
+
+footer {
+    background-color: #c86653;  
+    height: 100px;   
+}
+
+#alert {
+    position: fixed;
+    top: 80px;
+    width: 300px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    right: -300px;
+    opacity: 0;
+    transition: right 500ms ease, opacity 500ms ease;
+    z-index: 100;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgb(21, 41, 34);
+}
+
+.titulo-footer {
+    font-size: 20px;
+    font-family:"Roboto", sans-serif; 
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+}
+
+.msg-error {
+    color: red;
+    margin: 60px 0;
+}
+
+a:focus, button:focus {
+    outline: none;
+}
+
+@media(max-width:768px){
+    header nav {
+    display: none;
+    }
+    header .iconos-header {
+    display: none;
+    }
+    .menu-hamburger {
+    display: flex;
+    }
+    .icons-footer {
+    width: 350px;
+    }
+}
+
+@media(max-width:576px){
+    .icons-footer {
+    display: flex;
+    flex-direction: column;  
+    }
+    #social-footer {
+    display: flex;
+    flex-direction: row;
+    }
+    .extra-footer ul {
+    font-size: 12px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-self: center;
+    }
+    .container-mariposa {
+    width: auto;
+    }
+
+}

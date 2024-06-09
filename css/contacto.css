@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.contacto {
+    margin: 0px auto 20px;
+    width: 100%;
+}
+
+.contacto .sections-contacto {      
+    display: flex;
+    justify-content: center; 
+}
+
+.contacto .contacto-titulo {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100px;  
+    background-image: linear-gradient(to right, #ffd580 5%, #ffb580 80%, #ff9580 100%);
+    background-size: cover;
+    width: 100%;
+    height: 100px; 
+    margin: 120px auto 40px;
+    text-align: center;
+}
+
+.contacto section#section1  {
+    align-items: center; 
+    flex-direction: column;
+}
+
+.contacto h2.intro {
+    font-weight: 400;
+    font-size: 30px;  
+    margin-left: 10px;
+}
+
+.contacto .titulo-datos {
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.contacto section#section1 p {
+    width: 70%;  
+    text-align: center;
+}
+
+.contacto div.enlaces {
+    display: flex;
+    gap: 100px;
+    margin: 40px 0 50px;
+    text-transform: uppercase;
+}
+
+.contacto div.enlaces a {
+    gap: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.contacto .sections-contacto #section2 {
+    padding-bottom: 100px;
+    flex-direction: row;
+}
+
+.contacto div#formulario-contacto {
+    margin-right: 30px ;
+}
+
+.contacto div#datos {
+    width: 300px;
+    height: 50%;
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  
+    margin-top: 30px;
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(193, 120, 85), rgb(255, 127, 80));
+    align-items: center;
+}
+
+.contacto h3.titulo-datos {
+    font-size: 20px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.contacto .logo-whatsapp {
+    background-image: url('../Icons/whatsapp_logo.png');
+}
+.contacto .logo-email {
+    background-image: url('../Icons/mail_email_icon.png');
+}
+  
+.contacto .logo-whatsapp, .logo-email {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain; 
+    align-self: center;
+    width: 60px;
+    height: 60px;
+}
+
+.contacto #section2 input, button.botonEnviar, #section2 textarea {
+    display: block;
+    margin: 10px;
+    border-radius: 7px;
+    border: 1px solid grey;
+    box-shadow: 2px 2px 3px grey;
+    outline: none;
+}
+
+.contacto #section2 input {
+    width: 400px;
+    height: 35px;
+    margin-bottom: 20px;
+}
+
+.contacto #section2 input::placeholder, #section2 textarea::placeholder {
+    font-family: "Roboto", sans-serif;
+    color: rgb(53, 51, 51);
+    padding: 5px;   
+}
+
+.contacto #section2 textarea {
+    resize: both; 
+    min-width: 200px;
+    max-width: 400px;
+    padding: 10px;
+}
+
+.contacto #section2 button.botonEnviar {
+    color: white;
+    width: 100px;
+    height: 35px;
+    margin: 20px 10px 0;
+    text-transform: uppercase;
+    border: 1px solid rgb(78, 42, 25);
+    border-radius: 5px;
+    background-color: rgb(193, 120, 85); 
+    cursor: pointer;
+}
+
+@media(max-width:768px){
+    .contacto #section2 input {
+    width: 350px;
+    height: 30px;
+    margin-bottom: 20px;
+    }
+    .contacto section #section2 {
+    flex-direction: column;
+    }
+    .contacto h2.intro {
+    margin-top: 0;
+    }    
+    .contacto #datos {
+    margin: 0 10px;
+    }
+   
+}
+
+@media(max-width:576px) {
+    .contacto .contacto-titulo {
+    font-size: 32px;
+    }
+    .contacto h2.intro {
+    font-size: 25px;
+    margin-top: 0;
+    }
+    .contacto section #section2 {
+    flex-direction: column;
+    margin-bottom: 50px;
+    }
+    .contacto div.enlaces {
+    gap: 20px;
+    }
+    .contacto #section2 input {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 20px;
+    }
+}

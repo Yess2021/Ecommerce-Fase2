@@ -1,0 +1,56 @@
+<section class="alta">
+ <!-- ------------------------------------------------------------------------------- -->
+    <h1 class="titulo-alta">Alta de productos</h1>
+
+    <form class="alta-form">
+        <!-- campo de ingreso de nombre de producto -->
+        <div class="input-group">
+            <label for="nombre">nombre</label>
+            <input class="entrada" id="nombre" type="text" name="nombre" autocomplete="off" required>
+            <div id="error-nombre" class="error-details"></div>
+        </div>
+
+        <!-- campo de ingreso de detalles de producto -->
+        <div class="input-group">
+            <label for="detalles">detalles</label>
+            <input class="entrada" id="detalles" type="text" name="detalles" autocomplete="off" required>
+            <div id="error-detalles" class="error-details"></div>
+        </div>
+
+        <!-- campo de ingreso de precio de producto -->
+        <div class="input-group">
+            <label for="precio">precio</label>
+            <input class="entrada" id="precio" type="number" name="precio" autocomplete="off" required>
+            <div id="error-precio" class="error-details"></div>
+        </div>
+
+        <!-- campo de ingreso de colores de producto -->
+        <div id = "colores-cantidades" class="input-group">
+            <div class="error-details"></div>
+        </div>
+
+        <!-- campo de ingreso de la foto del producto -->
+        <div class="input-group">
+            <label for="foto">foto</label>
+            <input class="entrada" id="foto" type="text" name="foto" autocomplete="off" required>
+            <div id="error-foto" class="error-details"></div>
+        </div>
+         <!-- campo de ingreso de ID del producto -->
+         <div class="input-group">
+            <label for="id">ID</label>
+            <input class="entrada" id="id" type="number" name="id" autocomplete="off" disabled>
+            <div class="error-details"></div>
+        </div>
+
+
+        <button class="btnAgregar">Agregar</button>
+    </form>
+    <hr>
+
+    <!-- ------------------------------------------------------------------------------- -->
+
+    <h2 id="titulo-table">Lista de productos disponibles</h2>
+
+    <table></table>
+
+</section>
