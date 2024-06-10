@@ -367,6 +367,8 @@ footer {
 .msg-error {
     color: red;
     margin: 60px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
 a:focus, button:focus {

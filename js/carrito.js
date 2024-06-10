@@ -14,13 +14,11 @@ let refBorrar
 let refPedir
 let refTotal
 
-let tallas = alta.funTallas()
-
 // -------------------------------------------
 //           Funciones Globales
 // -------------------------------------------
 
-function agregar(producto, tallayColorEscogido) { 
+function agregar(producto, tallayColorEscogido) {
     const id = producto.id
     const prodExistente = carritoMem.get(id)
     let consecutivo  
@@ -47,8 +45,7 @@ function agregar(producto, tallayColorEscogido) {
         carritoMem.guardar(producto)    
         return true
     }
-    else {
-            
+    else {         
             let datosCompra=prodExistente.datosCompra
             consecutivo++     
 
@@ -133,7 +130,7 @@ function agregar(producto, tallayColorEscogido) {
 }
 
 function render() {
-    main.closeSearch()  // Para cerrar la barra de busqueda al cargar la pagina
+    main.closeSearch()  
     let filasTabla
     const carrito = carritoMem.getAll()
     let total=0  
@@ -164,7 +161,7 @@ function render() {
                            <td class="centrar">`
 
                             arrayTalla.forEach((talla)=>{
-            filasTabla +=  `<p>${talla}  </p>`} )
+            filasTabla +=  `<p>${talla} </p>`} )
 
             filasTabla += `<td class="centrar">`                           
 

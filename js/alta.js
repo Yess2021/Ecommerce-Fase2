@@ -2,21 +2,19 @@
 //               Importacion
 // -------------------------------------------
 import productosMem from "./productosMem.js";
+import carritoMem from "./carritoMem.js";
 import servicioProductos from "./servicioProductos.js";
 import main from "./main.js";
-
 // -------------------------------------------
 //           Variables Globales
 // -------------------------------------------
-
 let editarID
-
 let refNombre
 let refDetalles
 let refPrecio
 
 let tallas = ["X", "M", "L"]
-let colores = [[], [], []]  //se agrega arrays anidados para separar colores por talles
+let colores = [[], [], []]  //Se agrega arrays anidados para separar colores por talles
 
 let refColor1 = []
 let refColor2 = []
@@ -29,13 +27,13 @@ let refStock3 = []
 let refFoto
 let refBotonAgregarActualizar
 
-//    -------------------------------------------
+//-----------------------------------------------
 //           Funciones Globales
 // ----------------------------------------------
 
 const funTallas = () => tallas
 
-function currency(total){ //agregado para dar formato de moneda
+function currency(total){ 
     return total.toLocaleString()
 }
 
@@ -66,10 +64,8 @@ function copiarProductoEnFormulario(producto) {
         else {
             if (campo != "datosCompra") {
                 const ref = document.getElementById(campo)
-
                 ref.value = producto[campo]
             }
-
         }
     }
 }
@@ -92,11 +88,11 @@ function borrarFormulario() {
     refPrecio.value = ''
 
     for (let talles = 0; talles < tallas.length; talles++) {
-        refColor1[talles].value = "#ffffff"  //se agrego para que NO MARQUE ERROR    
+        refColor1[talles].value = "#ffffff"    
         refColor2[talles].value = "#ffffff"
         refColor3[talles].value = "#ffffff"
 
-        refStock1[talles].value = ''    //ES UN STOCK POR CADA COLOR
+        refStock1[talles].value = ''   
         refStock2[talles].value = ''
         refStock3[talles].value = ''
     }
@@ -117,19 +113,15 @@ async function agregarActualizar(e) {
     let nombre = refNombre.value
     let detalles = refDetalles.value
     let precio = +refPrecio.value  
-
     let stock = [[], [], []]
     for (let talles = 0; talles < tallas.length; talles++) {
         stock[talles].push(refStock1[talles].value, refStock2[talles].value, refStock3[talles].value)
     }
     colores = [[], [], []]
-
     for (let talles = 0; talles < tallas.length; talles++) {
         colores[talles].push(refColor1[talles].value, refColor2[talles].value, refColor3[talles].value)
     }
-
     let foto = refFoto.value
-    let datosCompra=[]  
 
     let producto = {
         nombre: nombre,
@@ -138,7 +130,6 @@ async function agregarActualizar(e) {
         stock: stock,
         colores: colores,
         foto: foto,
-        //datosCompra:datosCompra   
     }
 
     if (formularioValido(producto)) {
@@ -303,11 +294,8 @@ function setListeners() {
         if(inputNombre.value.length === 0){
             errorNombre.innerHTML = "El campo no puede estar vacío"
         }
-        if(inputNombre.value.length > 20){
-            errorNombre.innerHTML = "El nombre no puede tener más de 20 caracteres"
-        }
         if(inputNombre.value.length < 3){
-            errorNombre.innerHTML = "El nombre no puede tener menos de 3 caracteres"
+            errorNombre.innerHTML = "El nombre debe tener al menos 3 caracteres"
         }
     })
     inputNombre.addEventListener('input', () => {
@@ -353,22 +341,14 @@ function setListeners() {
     inputFoto.addEventListener('input', () => {
             errorFoto.innerHTML = ""
     })
-
-
-
-
-
-
-   
-
-
 }
 
 async function start() {
 
     console.warn('startAlta')
 
-    main.closeSearch()  // Para cerrar la busquedfa al cargar la pagina
+    main.closeSearch()  
+    carritoMem.getAll()
 
     let filasTabla = ''
     editarID = null
@@ -414,12 +394,6 @@ async function start() {
 
     render()
 }
-
-
-
-// -------------------------------------------
-//               Ejecución
-// -------------------------------------------
 
 // -------------------------------------------
 //               Exportacion

@@ -1,14 +1,12 @@
 // -------------------------------------------
 //              Importaciones
 // -------------------------------------------
-
 import carritoLocalStorage from "./carritoLocalStorage.js"
-import inicio from "./inicio.js"
+
 //-----------------------------------------------------
 //             Variables globales 
 //-----------------------------------------------------
 let carrito = []
-let counter = 0
 
 const get = id => {
     carritoLocalStorage.guardar(carrito)
@@ -17,12 +15,12 @@ const get = id => {
 
 const clear = _ => {
     carrito = []
-    carritoLocalStorage.guardar(carrito)
-
+    carritoLocalStorage.guardar(carrito) 
 }
 
 const getAll = () => {
     carrito = carritoLocalStorage.leer("carrito")
+    updateCounter()
     return carrito
 }
 

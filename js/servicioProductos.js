@@ -18,9 +18,6 @@ const eliminar = async id => await fetch(url+id, {
     method: 'DELETE',
 }).then(r => r.json())
 
-
-
-
 // -------------------------------------------
 //               Exportacion
 // -------------------------------------------

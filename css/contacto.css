@@ -103,45 +103,65 @@
     height: 60px;
 }
 
-.contacto #section2 input, button.botonEnviar, #section2 textarea {
+.contacto #section2 input, #section2 textarea {
     display: block;
-    margin: 10px;
+    margin: 5px 10px;
     border-radius: 7px;
     border: 1px solid grey;
-    box-shadow: 2px 2px 3px grey;
     outline: none;
+}
+
+.contacto #section2 input:hover, #section2 textarea:hover {
+box-shadow: 2px 2px 3px grey;
 }
 
 .contacto #section2 input {
     width: 400px;
     height: 35px;
-    margin-bottom: 20px;
 }
 
 .contacto #section2 input::placeholder, #section2 textarea::placeholder {
     font-family: "Roboto", sans-serif;
-    color: rgb(53, 51, 51);
-    padding: 5px;   
+    color: rgb(118, 116, 116);
+    padding: 5px;  
+    font-size: 14px;
 }
 
 .contacto #section2 textarea {
     resize: both; 
     min-width: 200px;
     max-width: 400px;
-    padding: 10px;
+    margin-top: 25px;
 }
 
 .contacto #section2 button.botonEnviar {
-    color: white;
-    width: 100px;
-    height: 35px;
-    margin: 20px 10px 0;
-    text-transform: uppercase;
-    border: 1px solid rgb(78, 42, 25);
-    border-radius: 5px;
-    background-color: rgb(193, 120, 85); 
+    margin: 10px 10px 0;
     cursor: pointer;
+    text-transform: uppercase;
+    display: block;
+    width: 80px;
+    height: 35px; 
+    border-radius: 5px;
+    font-size: 14px;
+    border: 1px solid #c86653;
+    background-color: #f26a4e;
+    color: white;
 }
+
+.contacto #section2 button.botonEnviar:hover {
+    box-shadow: 3px 3px 3px #792f20;
+}
+
+.contacto .error-detailsContacto {
+    padding-top: 8px;
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    top: -5px;
+}
+
+/* ------------------------------------------------------------------------------------- */
 
 @media(max-width:768px){
     .contacto #section2 input {

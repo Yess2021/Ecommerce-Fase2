@@ -95,17 +95,15 @@ function botonSearch() {
 }
 
 function closeSearch() {
-    const display = window.getComputedStyle(barraBuscar).getPropertyValue("display"); // Para cerrar la busquedfa al cargar la pagina
+    const display = window.getComputedStyle(barraBuscar).getPropertyValue("display"); 
     inputBuscar.value = '';
     barraBuscar.style.display = 'none';
-
 }
 
 const overlay = document.getElementById('overlay');
 
 function showMenu() {
-    overlay.style.display = 'block';
-    
+    overlay.style.display = 'block'; 
 }
 
 function closeMenu() {
@@ -122,6 +120,9 @@ function startMain() {
 
 window.onload = startMain
 
+// -------------------------------------------
+//               Exportacion
+// -------------------------------------------
 
 export default{
     showMenu,

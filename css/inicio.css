@@ -134,6 +134,7 @@
     flex-direction: row;
     margin: 5px auto 5px;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 
@@ -156,6 +157,7 @@
     font-size: 14px;
     display: flex;
     justify-content: center;  
+    cursor: pointer;
 }
 
 .inicio button.ver-mas {

@@ -18,13 +18,14 @@
             <h2 class="intro">Contactanos</h2>
             <div>
                 <form action="https://postman-echo.com/post" method="post">
-                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" autocomplete="off">
-                    <input type="text" placeholder="Correo electronico" autocomplete="off" required>
-                    <input type="number" placeholder="Telefono" min="10" autocomplete="off">
-                    <div>
+                    <input type="text" id="nombre-contacto" name="nombre" placeholder="Nombre" autocomplete="off">
+                    <div class="error-detailsContacto" id="error-nombre-contacto"></div>
+                    <input type="email" id="email-contacto" placeholder="Correo electronico" name="email" autocomplete="off" required>
+                    <div class="error-detailsContacto" id="error-email-contacto"></div>
+                    <input type="number" placeholder="Telefono" minlength="10" autocomplete="off">
                         <textarea class="campo" placeholder="Mensaje" name="comentarios" id="comentarios" cols="30"
                             rows="4" autocomplete="off" required></textarea>
-                    </div>
+                            <div class="error-detailsContacto" id="error-comentarios"></div>  
                     <button class="botonEnviar">Enviar</button>
                 </form>
             </div>

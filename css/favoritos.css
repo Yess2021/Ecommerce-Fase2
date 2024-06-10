@@ -2,8 +2,7 @@
 
 .favoritos {
     width: 100%;
-    min-height: 90vh;
-    font-family: "Roboto", sans-serif;    
+    min-height: 90vh; 
 }
 
 .favoritos-titulo {
@@ -31,7 +30,6 @@
     width: 302px; 
     height: 550px;
     background-color: white;
-    color: black;
     margin-bottom: 30px;
     position: relative;
     text-align: center;
@@ -83,11 +81,6 @@
     margin: 5px auto 5px;
     justify-content: space-between;
 }
-
-
-
-
-
 
 /* ------------------------------------------------------------------------ */
 

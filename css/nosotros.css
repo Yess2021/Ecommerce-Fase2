@@ -94,6 +94,8 @@
     color: black;
 }
 
+/* ----------------------------------------------------------------- */
+
 @media(max-width:576px){
     .nosotros .nosotros-titulo {
     font-size: 30px;

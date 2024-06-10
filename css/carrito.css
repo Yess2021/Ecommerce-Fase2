@@ -41,9 +41,7 @@
     font-family: "Roboto", sans-serif; 
 }
 
-.carrito h2 {
-    text-align: center;
-}
+
 
 .carrito table button[id*="btnBorrar-"] {
     margin: 15px auto;
@@ -89,8 +87,7 @@
     border: 1px solid black;
     width: 250px;
     height: 80px;
-    margin: 30px auto 20px;
-     
+    margin: 30px auto 20px;  
 }
 
 .carrito section div {
@@ -110,7 +107,6 @@
     border: none;
     background-color: #f26a4e;
     color: white;
-
 }
 
 .carrito .colores-container {
@@ -130,7 +126,7 @@
     justify-content: space-between;
 }
 
-/* ---------------------------------------- */
+/* ------------------------------------------------------ */
 
 @media(max-width:576px){
     .carrito-titulo {

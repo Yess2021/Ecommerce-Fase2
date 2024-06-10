@@ -8,7 +8,6 @@ const guardar = (favorito) => {
 const leer = ()=> {
     try {
         let j= JSON.parse(localStorage.getItem("favorito")) || []
-
     return j
     }
     catch {
@@ -24,5 +23,4 @@ const leer = ()=> {
 export default {
     guardar,
     leer
-    //aComprar
 }

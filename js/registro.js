@@ -1,8 +1,8 @@
 // -------------------------------------------
 //               Importacion
 // -------------------------------------------
-
 import main from "./main.js";
+import carritoMem from "./carritoMem.js";
 
 // -------------------------------------------
 //           Variables Globales
@@ -15,9 +15,9 @@ import main from "./main.js";
 
 function start() {
     console.warn('startRegistro');
-    main.closeSearch()  //agregado 24/05 para cerrar la busquedfa al cargar la pagina
+    main.closeSearch() 
+    carritoMem.getAll()
 }
-
 
 // -------------------------------------------
 //               Ejecución

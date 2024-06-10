@@ -2,6 +2,7 @@
 //               Importacion
 // -------------------------------------------
 import productosMem from "./productosMem.js";
+import carritoMem from "./carritoMem.js";
 import servicioProductos from "./servicioProductos.js";
 import main from "./main.js";
 import favoritoMem from "./favoritoMem.js";
@@ -11,7 +12,6 @@ import inicio from "./inicio.js";
 // -------------------------------------------
 //           Variables Globales
 // -------------------------------------------
-
 let listaFavoritos = favoritoMem.getAll()
 let tallas = alta.funTallas()  
 
@@ -48,9 +48,7 @@ const productos = productosMem.getAll()
                     `<div class="colores" id="${producto.id + "," + index}" style="background-color: ${valor}"></div>`
                     : `<div class="colores" id="${producto.id + "," + index}" style="opacity:10%; background-color: ${valor}"></div>`
             })
-
             cards += '</div></section>'
-
         }
     }
     else cards += '<h2 class="msg-error">No tienes favoritos para mostrar</h2>'
@@ -58,7 +56,7 @@ const productos = productosMem.getAll()
     document.querySelector('.section-cards-container').innerHTML = cards 
 }
 
-function agregarFav(nombre) {  // Para guardar favoritos en local storage 
+function agregarFav(nombre) {  //Para guardar favoritos en local storage 
     function filtrar(favorito){
         return favorito !== nombre
     }
@@ -77,9 +75,7 @@ function borrarFav(nombre){  // Para borrar favorito
     favoritoMem.eliminar(nombre)
     listaFavoritos = favoritoMem.getAll() 
 }
-
 const lista = () => listaFavoritos 
-
 
 
 async function start() {
@@ -88,6 +84,7 @@ async function start() {
 
     productosMem.set(productos)
     main.closeSearch()  
+    carritoMem.getAll()
     representarCardsFavoritos()
 }
 
