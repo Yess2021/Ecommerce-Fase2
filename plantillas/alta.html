@@ -25,14 +25,16 @@
         </div>
 
         <!-- campo de ingreso de colores de producto -->
-        <div id = "colores-cantidades" class="input-group">
+        <div id="colores-cantidades" class="input-group">
             <div class="error-details"></div>
         </div>
 
         <!-- campo de ingreso de la foto del producto -->
         <div class="input-group">
-            <label for="foto">foto</label>
-            <input class="entrada" id="foto" type="text" name="foto" autocomplete="off" required>
+            <div class="file-label">foto</div>
+            <label id="file-input-label" for="foto" class="label-file">Subir foto
+            </label>
+            <input class="entrada" id="foto" type="file" name="foto" autocomplete="off" accept=".png, .jpg, .jpeg">
             <div id="error-foto" class="error-details"></div>
         </div>
          <!-- campo de ingreso de ID del producto -->

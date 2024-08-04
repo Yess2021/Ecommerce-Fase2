@@ -39,7 +39,7 @@ function agregar(producto, tallayColorEscogido) {
     if (!prodExistente) {  
         consecutivo=[0]     
         objSeleccion.idTC=consecutivo 
-        let datosCompra = producto.datosCompra
+        let datosCompra = producto.datosCompra ?? []
         datosCompra.push(objSeleccion)
         producto.datosCompra = datosCompra 
         carritoMem.guardar(producto)    

@@ -46,6 +46,30 @@
     margin-bottom: 5px;
 }
 
+.alta #colores-cantidades label {
+  margin-top: 8px;
+}
+
+.alta .file-label {
+  margin-top: 8px;
+  color: rgb(27, 27, 27);
+  text-transform: capitalize;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.alta .label-file {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 6px 12px;
+  cursor: pointer;
+  text-transform: none;
+}
+
+.alta input[type="file"] {
+    display: none;
+}
+
 .alta input {
     width: 70%;
     height: 30px;
@@ -169,7 +193,13 @@
 }
 
 .alta .centrar {
-    text-align: center;
+  text-align: center;
+}
+
+.alta .centrar.id {
+    text-overflow: ellipsis;
+    max-width: 20px;
+    overflow: hidden;
 }
 
 .alta .error-details {

@@ -108,8 +108,21 @@ function formularioValido(producto) {
     return true
 }
 
+const toBase64 = file => new Promise((resolve, reject) => {
+  const reader = new FileReader();
+  reader.readAsDataURL(file);
+  reader.onload = () => resolve(reader.result);
+  reader.onerror = reject;
+});
+
 async function agregarActualizar(e) {
-    e.preventDefault()
+  e.preventDefault();
+  if (!refFoto.files[0]) {
+    const errorFoto = document.getElementById("error-foto");
+    errorFoto.innerHTML = "Debe subir una foto del producto";
+    return;
+  }
+
     let nombre = refNombre.value
     let detalles = refDetalles.value
     let precio = +refPrecio.value  
@@ -121,7 +134,7 @@ async function agregarActualizar(e) {
     for (let talles = 0; talles < tallas.length; talles++) {
         colores[talles].push(refColor1[talles].value, refColor2[talles].value, refColor3[talles].value)
     }
-    let foto = refFoto.value
+    let foto = await toBase64(refFoto.files[0])
 
     let producto = {
         nombre: nombre,
@@ -178,7 +191,7 @@ function render() {
 
         for (let i = 0; i < productos.length; i++) {
             filasTabla += `<tr>
-                            <td class="centrar">${productos[i].id}</td>
+                            <td class="centrar id">${productos[i]._id}</td>
                             <td class="centrar">${productos[i].nombre}</td>
                             <td class="centrar">${productos[i].detalles}</td>
                             <td class="centrar">$ ${currency(productos[i].precio)}</td>
@@ -333,14 +346,25 @@ function setListeners() {
     const inputFoto = document.getElementById("foto")
     const errorFoto = document.getElementById("error-foto")
 
-    inputFoto.addEventListener('blur', () => {
-        if(inputFoto.value.length === 0){
-            errorFoto.innerHTML = "El campo no puede estar vacío"
-        }
-    })
-    inputFoto.addEventListener('input', () => {
-            errorFoto.innerHTML = ""
-    })
+    const inputFotoLabel = document.getElementById("file-input-label");
+
+    const maxFileSize = 1024 * 1024; // 1MB in bytes
+
+    inputFoto.addEventListener("input", (event) => {
+      const files = event.target.files;
+      if (files.length > 0) {
+        const fileSize = files[0].size;
+        if(fileSize > maxFileSize ) {
+          errorFoto.innerHTML = "Foto muy grande, debe ser menor a 1 MB";
+          inputFotoLabel.innerHTML = 'Subir foto';
+          inputFoto.value = '';
+        } else {
+        const fileName = files[0].name;
+        inputFotoLabel.innerHTML = fileName;
+        errorFoto.innerHTML = "";
+      }
+      }
+    });
 }
 
 async function start() {
